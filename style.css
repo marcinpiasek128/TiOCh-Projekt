@@ -1,0 +1,150 @@
+:root {
+	--glowny-kolor-tla: #2773e5;
+	--jasniejszy-kolor-tla: #3884f6;
+	--ciemniejszy-kolor-tla: #1662d4;
+	--tlo: #252525;
+	--jasniejsze-tlo: #bfbfbf;
+	--stopka-tlo: #131313;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: var(--tlo);
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	margin: 0 !important;
+}
+
+#all {
+	position: relative;
+	min-height: 100vh;
+}
+
+#header {
+	width: 100%;
+	padding-bottom: 20px;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: bold;
+	text-align: center;
+	float: center;
+	font-size: 85px;
+	display: block;
+}
+
+a.logolink {
+	text-decoration: none;
+	display: block;
+	color: var(--ciemniejszy-kolor-tla);
+}
+
+
+#navigation {
+	width: 100%;
+	padding: 10px 0;
+	background-color: var(--glowny-kolor-tla);
+	text-align: center;
+	border-top: 1px solid var(--ciemniejszy-kolor-tla);
+	border-bottom: 1px solid var(--ciemniejszy-kolor-tla);
+}
+
+ol {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 18px;
+	height: 35px;
+	line-height: 200%;
+	text-shadow: 2px 2px 1px #000000;
+	display: inline-block;
+	color: #cacaca;
+}
+
+#content {
+	width: 60%;
+	padding-top: 1.5rem;
+	padding-bottom: 3.5rem;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--stopka-tlo);
+	text-align: center;
+	padding: 10px 0;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--jasniejsze-tlo);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--glowny-kolor-tla);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--jasniejszy-kolor-tla);
+}
+
+#result, #historyResult {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+canvas {
+    margin-top: 20px;
+}
