@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchCurrencies = async () => {
         try {
             const [responseA, responseB] = await Promise.all([
-                fetch('http://api.nbp.pl/api/exchangerates/tables/A/?format=json'),
-                fetch('http://api.nbp.pl/api/exchangerates/tables/B/?format=json')
+                fetch('https://api.nbp.pl/api/exchangerates/tables/A/?format=json'),
+                fetch('https://api.nbp.pl/api/exchangerates/tables/B/?format=json')
             ]);
             const [dataA, dataB] = await Promise.all([responseA.json(), responseB.json()]);
             const currencies = [...dataA[0].rates, ...dataB[0].rates];
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             if (currency === 'PLN') return 1;
 
-            const responseA = await fetch(`http://api.nbp.pl/api/exchangerates/rates/A/${currency}/?format=json`);
+            const responseA = await fetch(`https://api.nbp.pl/api/exchangerates/rates/A/${currency}/?format=json`);
             if (responseA.ok) {
                 const dataA = await responseA.json();
                 return dataA.rates[0].mid;
@@ -170,13 +170,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 return dates;
             }
 
-            const responseA = await fetch(`http://api.nbp.pl/api/exchangerates/rates/A/${currency}/${startDate}/${endDate}/?format=json`);
+            const responseA = await fetch(`https://api.nbp.pl/api/exchangerates/rates/A/${currency}/${startDate}/${endDate}/?format=json`);
             if (responseA.ok) {
                 const dataA = await responseA.json();
                 return dataA.rates;
             }
 
-            const responseB = await fetch(`http://api.nbp.pl/api/exchangerates/rates/B/${currency}/${startDate}/${endDate}/?format=json`);
+            const responseB = await fetch(`https://api.nbp.pl/api/exchangerates/rates/B/${currency}/${startDate}/${endDate}/?format=json`);
             if (responseB.ok) {
                 const dataB = await responseB.json();
                 return dataB.rates;
